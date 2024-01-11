@@ -1,0 +1,177 @@
+header {
+    width: 100%;
+    height: 66px;
+    position: relative;
+}
+
+
+.sound-status {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.sound {
+    width: 45px;
+}
+
+
+
+.hamburger-menu {
+    top: 10px;
+    left: 11px;
+    position: absolute;
+    width: 50px;
+    scale: 70%;
+    cursor: pointer;
+    transition: all 500ms;
+    z-index: 2001;
+}
+
+.hamburger-menu:before,
+.hamburger-menu:after,
+.hamburger-menu div {
+    background: var(--yellow-color);
+    content: '';
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    margin: 7px 0;
+    transition: 400ms;
+}
+
+.hamburger-menu2:before {
+    transform: translateY(13px) rotate(135deg);
+}
+
+.hamburger-menu2:after {
+    transform: translateY(-13px) rotate(-135deg);
+}
+
+.hamburger-menu2 div {
+    transform: scale(0);
+}
+
+
+
+
+.header-button {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transition: all 500ms;
+    z-index: 500;
+}
+
+
+
+.back-button {
+    height: 45px;
+    width: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow-color);
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 6px 0 rgb(213, 160, 54);
+    transition: opacity 500ms;
+    cursor: pointer;
+}
+
+.back-button img {
+    width: 34px;
+}
+
+.back-button:hover {
+    scale: 94%;
+}
+
+.reassign {
+    height: 45px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--yellow-color);
+    box-shadow: 0 6px 0 rgb(213, 160, 54);
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.reassign div {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(165, 98, 15);
+}
+
+.reassign:hover {
+    scale: 96%;
+}
+
+.restart-dialog {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.restart-dialog-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    width: 280px;
+    height: 150px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    outline: 10px solid var(--little-lighter);
+    border-radius: 14px;
+}
+
+.restart-dialog span {
+    position: absolute;
+    top: 3px;
+    font-size: 24px;
+}
+
+.restart-dialog :nth-child(2) {
+    background-color: rgb(76, 175, 80);
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 40px;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.restart-dialog :nth-child(3) {
+    background-color: rgb(244, 67, 54);
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 40px;
+    font-size: 25px;
+    cursor: pointer;
+}

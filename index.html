@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="Style/sidear.css">
+    <link rel="stylesheet" href="Style/header.css">
+
+    <link rel="stylesheet" href="Style/style.css">
+
+
+    <script src="Game-Words/words.js" defer></script>
+    <script src="script/script.js" defer></script>
+
+    <title>Spy</title>
+</head>
+
+
+
+<body>
+    <audio src="Audio/Run-Amok.mp3" id="main-audio"></audio>
+    <audio src="Audio/tenToOne.mp3" id="ten-to-one"></audio>
+
+
+    <header>
+
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div></div>
+        </div>
+        
+        
+        <div class="header-button none" id="header-button">
+            <div class="back-button" id="back-button">
+                <img src="img/refresh-button.svg" alt="back-button">
+            </div>
+
+            <div class="reassign" id="reassign">
+                <div>
+                    باز پخش نقش ها
+                </div>
+            </div>
+        </div>
+
+        <div class="sound-status" id="sound-status">
+        </div>
+        
+
+
+
+    </header>
+
+
+    <nav class="none">
+        <div class="sidebar" id="sidebar">
+            <div class="fake-space">منو بازی</div>
+            <div class="any-row-sidebar" id="game-guide-button">
+                <div>راهنمای بازی</div>
+            </div>
+            <div class="any-row-sidebar" id="reset-the-game">
+                <div>ریست کردن بازی</div>
+            </div>
+        </div>
+
+        <div class="guide-popUp none" id="guide-popUp">
+            <div>
+                <img src="img/multiplication.svg" class="guide-multiplication" id="guide-multiplication">
+            </div>
+            <div class="guide-text-container">
+                <div>
+                    <h1>
+                        <span>
+                            قوانین و نحوه اجرای بازی جاسوس
+                        </span>
+                    </h1>
+                </div>
+                <div>
+                    <h3>
+                        داستان بازی:
+                    </h3>
+                    <p>
+                        شما یک کاراگاه در یک سرویس اطلاعاتی هستید. 
+                    </p>
+                    <p>
+                        به تازگی مشخص شده که یک جاسوس در بخش شما هست. 
+                    </p>
+                    <p>
+                        کل بخش دور هم جمع شدند تا با پرسیدن سوال از یکدیگر بتوانند جاسوس را پیدا کنند. 
+                    </p>
+                </div>
+                <div>
+                    <h3>
+                        شرایط مورد نیاز برای بازی:
+                    </h3>
+                    <li>
+                        وجود حداقل ۴ بازی کن در بازی.
+                    </li>
+                    <li>
+                        همه بازیکنها در یک اتاق باشند. 
+                    </li>
+                </div>
+                <div>
+                    <h3>
+                        اهداف بازی:
+                    </h3>
+                    <li>
+                        <span>جاسوس:</span>
+                        حدس زدن کلمه ی بازی با استنتاج از جواب و سوال های دیگران.
+                    </li>
+                    <li>
+                        <span>کاراگاه ها:</span>
+                        پیدا کردن جاسوس(ها) 
+                    </li>
+                </div>
+                <div>
+                    <h3>
+                        نحوه اجرای بازی:
+                    </h3>
+                    <li>
+                        <span>
+                            زمان هر بازی:
+                        </span>
+                        3-12 دقیقه. برای گروه های کوچکتر زمان کمتر و برای گروه های بزرگتر زمان بیشتر. 
+                    </li>
+                    <li>
+                        <span>
+                            کلمه:
+                        </span>
+                        بازی شروع میشود و تمام افراد به نوبت کلمه مربوط به خود را میبینند. کلمه برای همه یکسان است جز
+                        جاسوس
+                        (ها). جاسوس (ها) کلمه را نمیداند. 
+                    </li>
+                    <li>
+                        <span>
+                            نحوه سوال پرسیدن:
+                        </span>
+                        بازی با سوال کردن یک نفر از نفر دیگه شروع میشود. برای مثال: (کوچک یا بزرگ؟) 
+                    </li>
+                    <li>
+                        <span>
+                            نحوه جواب دادن:
+                        </span>
+                        فردی که ازش سوال شده است باید جواب بدهد و نمیتواند از پرسشگر، سوال دیگری بپرسد. بعد از پاسخ
+                        دادن،
+                        نوبت او میشود که سوال بپرسد. همین روند تا وقتی بازی تمام شود ادامه دارد. 
+                    </li>
+                    <li>
+                        <span>
+                            سوال متقابل ممنوع:
+                        </span>
+                        اگر فردی از شما سوال بپرسد، شما نمیتوانید بعد از جواب دادن سوالش از پرسشگر سوال بپرسید. باید فرد
+                        دیگری را انتخاب کنید. 
+                    </li>
+                </div>
+
+                <div>
+                    <h3>
+                        حدس جاسوس توسط بازیکنان:
+                    </h3>
+                    <li>
+                        <span>
+                            رای گیری:
+                        </span>
+                        در هر لحظه از بازی، یک بازیکن میتواند برای خروج بازیکنی که مشکوک به جاسوس بودن هست، رای گیری
+                        کند.
+                        
+                    </li>
+                    <li>
+                        <span>
+                            تعداد رای های لازم برای خروج:
+                        </span>
+                        اگر تعداد افرادی که رای میدهند با تعداد کاراگاه ها برابر باشد
+                        بازیکن مورد رای از بازی خارج میشود. هر بازیکن در کل بازی یک بار میتواند برای فردی دیگر رای گیری
+                        کند.
+                        
+                    </li>
+                    <li>
+                        <span>
+                            جاسوس متهم شد:
+                        </span>
+                        اگر رای گیری برای خروج بازیکن موفقیت آمیز بود، بازیکن باید اعلام کند که جاسوس است یا نه. اگر
+                        بازیکن
+                        اخراجی جاسوس نباشد بازی به پایان میرسد و جاسوس (ها) برنده بازی میشوند. در غیر این صورت بازی
+                        ادامه
+                        دارد. 
+                    </li>
+                </div>
+                <div>
+                    <h3>
+                        حدس کلمه توسط جاسوس:
+                    </h3>
+                    <li>
+                        <span>
+                            حدس جاسوس:
+                        </span>
+                        جاسوس در لحظه میتواند بگوید که جاسوس است و حدس بزند که کلمه چیست، اگر درست گفته باشد بازی به
+                        پایان
+                        میرسد اما اگر اشتباه حدس زده باشد بازی تا زمانی که اخرین جاسوس در بازی باشد ادامه دارد. 
+                    </li>
+                </div>
+                <div>
+                    <h3>
+                        زمانی بازی زمانی به پایان میرسد که:
+                    </h3>
+                    <li>
+                        <span>
+                            خروج شهروند یا آخرین جاسوس:
+                        </span>
+                        بازیکنان آخرین شهروند یا آخرین جاسوس را بعد از رای گیری اخراج میکنند. 
+                    </li>
+                    <li>
+                        <span>
+                            حدس کلمه توسط جاسوس:
+                        </span>
+                        هر جاسوسی که بخواهد بازی را نگه میدارد و حدس خود را در مورد کلمه میگوید. 
+                    </li>
+                    <li>
+                        <span>
+                            زمان به پایان برسد. 
+                        </span>
+                    </li>
+                </div>
+                <div>
+                    <h3>
+                        امتیاز دهی و تعیین برنده بازی:
+                    </h3>
+
+                    <span>
+                        برد جاسوس (ها):
+                    </span>
+
+                    <li>
+                        گروه جاسوس <span>۲ امتیاز</span> میگیرد اگر جاسوسی از بازی اخراج نشود. 
+                    </li>
+                    <li>
+                        گروه جاسوس <span>۴ امتیاز میگیرد</span> اگر کاراگاهی از بازی اخراج نشود. 
+                    </li>
+                    <li>
+                        گروه جاسوس <span>۴ امتیاز میگیرد</span> اگر جاسوسی بازی را نگه دارد و کلمه را درست حدس بزند.
+                        
+                    </li>
+
+                    <span>
+                        برد کاراگاه ها:
+                    </span>
+
+                    <li>
+                        هر کاراگاه <span>۱ امتیاز</span> میگیرد.
+                    </li>
+                    <li>
+                        هر کاراگاهی که رای گیری برگذار گرده باشد و جاسوس اخراج کرده باشد <span>۲ امتیاز</span> میگیرد. 
+                    </li>
+
+                    <div>
+                        <h3>
+                            تعداد بازی ها:
+                        </h3>
+                        <li>
+                            شما میتوانید به هر تعدادی که میخواهید بازی انجام بدهید و در آخر فردی که بیشترین امتیاز را
+                            کسب
+                            کرده
+                            باشد برنده کلی بازی است.
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+
+
+    <div class="restart-dialog none" id="reassign-dialog">
+        <div class="restart-dialog-board">
+            <span>دوباره پخش کنم؟</span>
+            <div id="no2">نه</div>
+            <div id="yes2">آره</div>
+        </div>
+    </div>
+
+    <div class="restart-dialog none" id="restart-dialog">
+        <div class="restart-dialog-board">
+            <span>بازی مجدد؟</span>
+            <div id="no">نه</div>
+            <div id="yes">آره</div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+
+    <div class="body">
+
+        <div class="cat-popUp-container none" id="cat-popUp-container">
+            <div class="category-title" id="category-title">انتخاب دسته بندی</div>
+            <img src="img/multiplication.svg" class="multiplication">
+            <div class="popUp-board" id="popUp-board">
+                <div id="cat-0">
+                    <p id="sell-all">همه</p>
+                    <p id="sell-none">هیچکدام</p>
+                </div>
+                <div id="cat-1">
+                    <p>حیوانات</p>
+                    <div2 class="none"></div2>
+                </div>
+                <div id="cat-2">
+                    <p>اشیاء</p>
+                    <div2 class="none"></div2>
+                </div>
+                <div id="cat-3">
+                    <p>شغل</p>
+                    <div2 class="none"></div2>
+                </div>
+                <div id="cat-4">
+                    <p>مکان</p>
+                    <div2 class="none"></div2>
+                </div>
+                <div id="cat-5">
+                    <p>فیلم و سریال</p>
+                    <div2 class="none"></div2>
+                </div>
+                <div id="cat-6">
+                    <p>زمان</p>
+                    <div2 class="none"></div2>
+                </div>
+                <div id="cat-7">
+                    <p>انتزاعی</p>
+                    <div2 class="none"></div2>
+                </div>
+                <div id="cat-8">
+                    <p>اعضای بدن</p>
+                    <div2 class="none"></div2>
+                </div>
+                <div id="cat-9">
+                    <p>مشاهیر</p>
+                    <div2 class="none"></div2>
+                </div>
+                <div id="cat-10">
+                    <p>خواکی</p>
+                    <div2 class="none"></div2>
+                </div>
+            </div>
+        </div>
+
+        <main class="none">
+            <div class="main-container">
+
+                <!-- first row -->
+                <div class="row">
+                    <div class="number">
+                        <div class="minuse-button" id="minuse-button-city">&#8722;</div>
+                        <div id="city-inner-number">5</div>
+                        <div class="plus-button" id="plus-button-city">&#43;</div>
+                    </div>
+                    <label>تعداد کاراگاه ها<img src="img/best-friend.png"></label>
+                </div>
+
+
+
+                <!-- second row -->
+                <div class="row">
+                    <div class="number">
+                        <div class="minuse-button" id="minuse-button-spy">&#8722;</div>
+                        <div id="spy-inner-number">5</div>
+                        <div class="plus-button" id="plus-button-spy">&#43;</div>
+                    </div>
+                    <label>تعداد جاسوسان<img src="img/spy-agent-svgrepo-com.svg"></label>
+                </div>
+
+
+
+                <!-- third row -->
+                <div class="row">
+                    <div class="number">
+                        <div class="minuse-button" id="minuse-button-time">&#8722;</div>
+                        <div id="time-inner-number">5</div>
+                        <div class="plus-button" id="plus-button-time">&#43;</div>
+                    </div>
+                    <label class="clock-c">زمان بازی<img class="clock"
+                            src="img/alarm-clock-clock-svgrepo-com.svg"></label>
+                </div>
+
+
+
+                <!-- Fourth row -->
+                <div class="row category" id="category">
+                    <div class="number">
+                        <div class="category-name" id="category-name"></div>
+                    </div>
+                    <label>انتخاب دسته<img src="img/category3.svg"></label>
+                </div>
+
+                <button class="play-button" id="play-button">شروع بازی</button>
+
+            </div>
+        </main>
+
+
+        <div class="page2-container none">
+            <main2>
+                <div id="game-title"></div>
+                <div id="game-text">بزن رو نمایش کلمه</div>
+                <div id="play-button-2">نمایش کلمه</div>
+                <div id="show-cat-page2"></div>
+            </main2>
+        </div>
+
+
+        <main3 class="timer-container none">
+            <div class="timer-div" id="timer-div"></div>
+            <div class="stop-game" id="stop-game">
+                پایان بازی
+            </div>
+        </main3>
+
+
+        <main4 id="main4" class="none">
+            <span>بازی تمام شد</span>
+            <span2 id="show-word"></span2>
+        </main4>
+
+
+        <div class="game-is-over none" id="game-is-over">
+            <div id="play-again">
+                شروع مجدد
+            </div>
+            <div id="go-main-menu">
+                صفحه اصلی
+            </div>
+        </div>
+
+        
+        
+    </div>
+</body>
+
+</html>
