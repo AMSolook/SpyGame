@@ -1,12 +1,6 @@
 Telegram.WebApp.ready();  // اپ رو آماده می‌کنه
-    Telegram.WebApp.expand(); // صفحه رو تمام‌صفحه می‌کنه
+Telegram.WebApp.expand(); // صفحه رو تمام‌صفحه می‌کنه
 
-    document.getElementById('send-btn').addEventListener('click', () => {
-      Telegram.WebApp.sendData(JSON.stringify({ action: 'hello' }));  // داده رو به بات بفرست (حداکثر ۴KB)
-    });
-
-    // داده‌های ورودی از بات (برای اعتبارسنجی)
-    console.log(Telegram.WebApp.initData);
 
 const buttons = {
     cityMinuse: document.getElementById('minuse-button-city'),
@@ -667,4 +661,5 @@ buttons.stopGame.addEventListener('click', () => {
         gameIsOver.classList.add('fade-in');
     }, 500);
 })
+
 
